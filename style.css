@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: var(--blue1);
+}
+
+:root{
+--blue-1: #001B48;
+--blue-2: #02457A;
+--blue-3: #018ABE;
+--blue-4: #97CADB;
+--blue-5: #D6E8EE;
+}
+@font-face {
+    font-family: 'Quicksand';
+    src: url(./Quicksand_Dash.otf);
+    font-style: oblique;
+}
+@font-face {
+    font-family: 'Quicksand';
+    src: url(./Quicksand_Light.otf);
+    font-style: normal;
+    font-weight: lighter;
+}
+@font-face {
+    font-family: 'Quicksand';
+    src: url(./Quicksand_Book.otf);
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Quicksand';
+    src: url(./Quicksand_Bold.otf);
+    font-style: normal;
+    font-weight: bold;
+}
+html{
+    background: -webkit-linear-gradient(290deg, var(--blue-1), var(--blue-2) 70%);
+    color: var(--blue-5);
+    padding: 2rem;
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    font-family: 'Quicksand';
+    font-size: 2rem;
+    font-weight: normal;
+}
+header{
+    background-color: #97cadb6d;
+    position: fixed;
+    width: 90%;
+    border-radius: 2rem;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem;
+}
+nav section{
+    width: 10%;
+}
+
+nav section img{
+    width: 1.7rem;
+    margin-left: 1rem;
+}
+nav ol{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: end;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+nav ol li{
+    margin: 0rem;
+    font-size: 0.8rem;
+}
+button{
+    color: var(--blue-5);
+    background-color: transparent;
+    border-width: 0;
+    font-family: 'Quicksand';
+    font-weight: bold;
+    padding: 0.5rem;
+}
+button:hover{
+    border-radius: 2rem;
+    background-color: var(--blue-5);
+    color: var(--blue-1);
+    transition-duration: 2s;
+}
+.vacio{
+    padding-top: 6rem;
+}
+main img{
+    width: 6rem;
+    height: 6rem;
+}
+main section{
+    display: flex;
+    flex-flow: row;
+    margin: 0.7rem;
+    font-size: 1rem;
+}
