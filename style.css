@@ -50,6 +50,7 @@ header{
     position: fixed;
     width: 90%;
     border-radius: 2rem;
+    
 }
 nav{
     display: flex;
@@ -93,14 +94,167 @@ button:hover{
 }
 .vacio{
     padding-top: 6rem;
+    width: 95%;
 }
 main img{
     width: 6rem;
     height: 6rem;
 }
-main section{
+.historia{
     display: flex;
     flex-flow: row;
+    flex-wrap: wrap;
+    width: 95%;
     margin: 0.7rem;
-    font-size: 1rem;
+}
+
+main section section{
+    display: flex;
+    flex-flow: row;
+    position: relative;
+    align-items: center;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    z-index:1;
+    font-size: 0.8rem;
+    overflow:hidden;
+}
+
+.historia section:nth-child(1){
+    background: url(./ALGORITMOS_Mesa\ de\ trabajo\ 1.png)
+    center no-repeat;
+    width: 12rem;
+    height: 12rem;
+    background-size:cover;
+}
+.historia section:nth-child(2){
+    background: url(./ALGORITMOS-03.png)
+    center no-repeat;
+    width: 12rem;
+    height: 12rem;
+    background-size:cover;
+}
+.historia section:nth-child(3){
+    background: url(./ALGORITMOS-04.png)
+    center no-repeat;
+    width: 12rem;
+    height: 12rem;
+    background-size:cover;
+}
+.historia section:nth-child(4){
+    background: url(./ALGORITMOS-05.png)
+    center no-repeat;
+    width: 12rem;
+    height: 12rem;
+    background-size:cover;
+}
+.historia section:nth-child(5){
+    background: url(./ALGORITMOS-06.png)
+    center no-repeat;
+    width: 12rem;
+    height: 12rem;
+    background-size:cover;
+}
+.historia section:nth-child(6){
+    background: url(./ALGORITMOS-07.png)
+    center no-repeat;
+    width: 12rem;
+    height: 12rem;
+    background-size:cover;
+}
+.historia section:nth-child(7){
+    background: url(./ALGORITMOS-08.png)
+    center no-repeat;
+    width: 12rem;
+    height: 12rem;
+    background-size:cover;
+}
+.historia section:nth-child(8){
+    background: url(./ALGORITMOS-02.png)
+    center no-repeat;
+    width: 12rem;
+    height: 12rem;
+    background-size:cover;
+}
+.historia section:nth-child(9){
+    background: url(./ALGORITMOS-09.png)
+    center no-repeat;
+    width: 12rem;
+    height: 12rem;
+    background-size:cover;
+}
+.historia section:nth-child(10){
+    background: url(./ALGORITMOS-10.png)
+    center no-repeat;
+    width: 12rem;
+    height: 12rem;
+    background-size:cover;
+}
+.historia section:nth-child(11){
+    background: url(./ALGORITMOS-11.png)
+    center no-repeat;
+    width: 12rem;
+    height: 12rem;
+    background-size:cover;
+}
+.historia section:nth-child(12){
+    background: url(./ALGORITMOS-12.png)
+    center no-repeat;
+    width: 12rem;
+    height: 12rem;
+    background-size:cover;
+}
+.historia section:nth-child(13){
+    background: url(./ALGORITMOS-13.png)
+    center no-repeat;
+    width: 12rem;
+    height: 12rem;
+    background-size:cover;
+}
+main section section::before,
+main section section::after{
+    content:'';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: calc(69.5%);
+    background-color: var(--blue-5);
+    transition: transform .5s .25s
+    ease-in;
+    z-index: -1;
+}
+
+main section section::before{
+    top:0;
+    clip-path:polygon(
+    0 0, 100% 0, 100% 45%, 0% 100%);
+    transform:translateY(-100%);
+}
+
+main section section::after{
+    bottom:0;
+    clip-path:polygon(
+    0 55%, 100% 0, 100% 100%, 0% 100%);
+    transform:translateY(100%);
+}
+
+
+
+.card_content{
+    height: 10rem;
+    width: 10rem;
+    font-weight: bold;
+    color: var(--blue-1);
+    margin: 1rem;
+    text-align: center;
+    opacity:0;
+    transition:opacity .25s;
+}
+main section section:hover::before,
+main section section:hover::after{
+    transform:translateY(0);
+}
+main section section:hover     .card_content{
+    opacity:1;
+    transition-delay:.75s;
 }
