@@ -103,7 +103,7 @@ header button:hover{
     justify-content: center;
     text-align: center;
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: normal;
 
 }
 
@@ -113,9 +113,9 @@ header button:hover{
     position: relative;
     align-items: center;
     border-radius: 1rem;
-    margin-top: 4rem;
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     z-index:1;
     font-size: 0.8rem;
     overflow:hidden;
@@ -211,6 +211,30 @@ header button:hover{
     height: 8rem;
     background-size:cover;
 }
+.historia section:nth-child(14){
+    background: url(./ALGORITMOS-15.png)
+    center no-repeat;
+    font-size: 0.64rem;
+    width: 8rem;
+    height: 8rem;
+    background-size:cover;
+}
+.historia section:nth-child(15){
+    background: url(./ALGORITMOS-16.png)
+    center no-repeat;
+    font-size: 0.64rem;
+    width: 8rem;
+    height: 8rem;
+    background-size:cover;
+}
+.historia section:nth-child(16){
+    background: url(./ALGORITMOS-17.png)
+    center no-repeat;
+    font-size: 0.64rem;
+    width: 8rem;
+    height: 8rem;
+    background-size:cover;
+}
 
 .historia section::before,
 .historia section::after{
@@ -266,13 +290,19 @@ header button:hover{
 .historia section:hover{
     cursor: pointer;
 }
+.boton{
+    border: none;
+    width: 100%;
+    height: auto;
+}
 .boton img{
-    width: 7rem;
-    height: 7rem;
+    width: 18rem;
+    border: 18rem;
 }
 .boton:hover{
-    transform: translateY(-2rem);
+    transform: translateY(-3rem);
     transition-duration: 2s;
+    border: none;
 }
 .solu{
     display: flex;
@@ -286,7 +316,6 @@ header button:hover{
     flex-wrap: wrap;
     width: 45%;
     margin: 1rem;
-    justify-content: center;
 }
 .explicacion section{
     display: flex;
@@ -295,12 +324,18 @@ header button:hover{
     justify-content: center;
 }
 .explicacion section section{
-    width: 35%;
-    margin: 1rem;
+    width: 45%;
+    margin-top: 0.5rem;
+    font-size: 0.7rem;
 }
 .vacio p{
     justify-content: center;
     text-align: center;
     font-size: 1rem;
     font-weight: bold;
+}
+.historia span{
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: var(--blue-3);
 }
