@@ -44,6 +44,7 @@ html{
     font-family: 'Quicksand';
     font-size: 2rem;
     font-weight: normal;
+    overflow-x: hidden;
 }
 header{
     background-color: #97cadb6d;
