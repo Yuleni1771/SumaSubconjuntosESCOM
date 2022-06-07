@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header id="header">
+        <div class="controls">
+          <div class="controls__animation">
+            <button id="play">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-play-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"
+                />
+              </svg>
+            </button>
+            <button id="restart">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-arrow-clockwise"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"
+                />
+                <path
+                  d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"
+                />
+              </svg>
+            </button>
+            <input id="range" type="range" />
+          </div>
+          <form id="form">
+            <label>Values</label>
+            <input
+              id="input"
+              type="text"
+              placeholder="Example: 12,21,32"
+              pattern="\d{1,2}(,\d{1,2}){0,7}"
+            />
+            <label>Sum</label>
+            <input id="sum" type="text" pattern="\d{1,2}" />
+            <button type="submit">Insertar</button>
+            <div class="links">
+              <a href="./dynamic.html">Dynamic</a>
+              <a href="../index.html">Home</a>
+            </div>
+          </form>
+        </div>
+        <div id="eles" class="elements"></div>
+      </header>
+      <div id="main" class="animation">
+        <span id="toggle"></span>
+        <div id="tree"></div>
+        <div id="stack"></div>
+      </div>
+    </div>
+    <script src="../utilities/anime.min.js"></script>
+    <script src="../utilities/cytoscape.cjs.js"></script>
+    <script src="../js/graphSettings.js"></script>
+    <script src="../js/utilities.js"></script>
+    <script src="../js/tree.js"></script>
+    <script src="../js/stack.js"></script>
+    <script src="../js/animationtree.js"></script>
+    <script src="../js/animationstack.js"></script>
+    <script src="../js/algorithm.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

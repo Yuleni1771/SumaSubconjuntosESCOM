@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  outline: none;
+  text-decoration: none;
+  border: none;
+}
+
+input {
+  outline: none;
+  text-decoration: none;
+  border: none;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  background-color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.animation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75%;
+  width: 100%;
+  padding-top: 15px;
+}
+
+#tree {
+  width: 75%;
+  height: 100%;
+  border: 1px solid purple;
+}
+
+#stack {
+  width: 25%;
+  height: 100%;
+  padding: 10px 0px;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+#stack .block {
+  background-color: #2676b3;
+  color: #222;
+  width: 0px;
+  height: 0px;
+  margin: 5px 0px;
+  border-radius: 5px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 25%;
+  border: 1px solid yellow;
+  overflow: hidden;
+}
+
+.animation span {
+  position: absolute;
+  background-color: #b82b2b;
+  width: 30px;
+  height: 15px;
+  left: 50%;
+  top: 0px;
+
+  cursor: pointer;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 55%;
+  border: 1px solid green;
+  overflow: hidden;
+}
+
+.controls__animation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
+}
+
+.controls__animation button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.controls__animation button:hover {
+  background-color: #2676b3;
+  transform: scale(1.1);
+}
+
+.controls__animation input[type='range'] {
+  width: 200px;
+  margin: 0px 5px;
+}
+
+.controls form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
+}
+
+.controls form input {
+  width: 250px;
+  padding: 5px 20px;
+  margin: 0px 5px;
+  font-size: 24px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.controls form input:invalid {
+  background-color: #b82b2b;
+}
+
+.controls form #sum {
+  width: 100px;
+}
+
+.controls form label {
+  margin: 5px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+}
+
+.controls form button {
+  margin: 0px 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: 700;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.controls form .links {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+
+.controls form button:hover {
+  background-color: #2676b3;
+  transform: scale(1.1);
+}
+
+.elements {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 45%;
+  border: 1px solid sienna;
+  overflow: hidden;
+}
+
+.elements .box {
+  margin: 0px 5px;
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #222;
+  text-align: center;
+  line-height: 60px;
+  font-size: 24px;
+  font-weight: 900;
+  cursor: pointer;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.elements .target {
+  margin: 0px 5px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #b82b2b;
+  color: #fff;
+  text-align: center;
+  line-height: 60px;
+  font-size: 24px;
+  font-weight: 900;
+  cursor: pointer;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.elements .box:hover {
+  background-color: #2676b3;
+  transform: scale(1.2);
+}
+
+#dp {
+  display: grid;
+  height: 98%;
+  width: 98%;
+  place-items: center;
+  overflow-y: auto;
+  overflow-x: auto;
+  position: relative;
+}
+
+#dp .el {
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 60px;
+  text-align: center;
+  color: #222;
+  z-index: 0;
+}
+
+.index {
+  z-index: 10000;
+}
