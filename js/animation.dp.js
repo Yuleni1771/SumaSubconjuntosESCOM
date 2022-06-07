@@ -10,13 +10,11 @@ const newTimeline = () =>
     update: () => {
       range.value = timeline.progress;
       if (timeline.progress > 99.75) timeline.pause();
-      cy.fit(cy.$('node'), 20);
     },
     complete: () => {
       timeline.seek(0.01);
       timeline.play();
       timeline.pause();
-      cy.fit(cy.$('node'), 20);
     },
   });
 
