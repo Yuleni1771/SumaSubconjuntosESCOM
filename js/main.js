@@ -14,39 +14,39 @@ let set = [];
 let sum = 9;
 // let n = set.length;
 
-toggle.addEventListener('click', () => {
-  if (!flagToggle) {
-    anime
-      .timeline({
-        targets: header,
-        height: ['25%', '0%'],
-        duration: 250,
-        easing: 'linear',
-      })
-      .add({
-        targets: main,
-        duration: 250,
-        height: ['75%', '100%'],
-        easing: 'linear',
-      });
-    flagToggle = true;
-  } else {
-    anime({
-      targets: header,
-      height: '25%',
-      duration: 250,
-      easing: 'linear',
-    });
+// toggle.addEventListener('click', () => {
+//   if (!flagToggle) {
+//     anime
+//       .timeline({
+//         targets: header,
+//         height: ['25%', '0%'],
+//         duration: 250,
+//         easing: 'linear',
+//       })
+//       .add({
+//         targets: main,
+//         duration: 250,
+//         height: ['75%', '100%'],
+//         easing: 'linear',
+//       });
+//     flagToggle = true;
+//   } else {
+//     anime({
+//       targets: header,
+//       height: '25%',
+//       duration: 250,
+//       easing: 'linear',
+//     });
 
-    anime({
-      targets: main,
-      duration: 250,
-      height: '75%',
-      easing: 'linear',
-    });
-    flagToggle = false;
-  }
-});
+//     anime({
+//       targets: main,
+//       duration: 250,
+//       height: '75%',
+//       easing: 'linear',
+//     });
+//     flagToggle = false;
+//   }
+// });
 
 const createBox = (data) => {
   let box = document.createElement('div');

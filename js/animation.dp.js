@@ -127,17 +127,18 @@ function setData(value) {
 
 const animationRes = (x, y, n) => {
   let temp = [];
-  let color = '#BCECF0';
+  let color = '#018abe';
+  let white = "#fff"
   temp = boxes[x].slice(n, y + 1);
 
   timeline.add({
     targets: temp,
     backgroundColor: ['#fff', `${color}`, '#fff'],
-    boxShadow: [
-      `0 0 0px ${color}, 0 0 0px ${color}, 0 0 0px ${color},0 0 0px ${color}, 0 0 0px ${color}`,
-      `0 0 10px ${color}, 0 0 20px ${color}, 0 0 40px ${color},0 0 80px ${color}, 0 0 120px ${color}`,
-      `0 0 0px ${color}, 0 0 0px ${color}, 0 0 0px ${color},0 0 0px ${color}, 0 0 0px ${color}`,
-    ],
+    // boxShadow: [
+    //   `0 0 0px ${white}, 0 0 0px ${white}, 0 0 0px ${white},0 0 0px ${white}, 0 0 0px ${white}`,
+    //   `0 0 10px ${color}, 0 0 20px ${color}, 0 0 40px ${color},0 0 80px ${color}, 0 0 120px ${color}`,
+    //   `0 0 0px ${white}, 0 0 0px ${white}, 0 0 0px ${white},0 0 0px ${white}, 0 0 0px ${white}`,
+    // ],
     duration: 1250,
     delay: anime.stagger(100),
   });
